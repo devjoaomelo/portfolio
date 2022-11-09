@@ -201,6 +201,7 @@ a#cv:hover {
     height: fit-content;
     width: max-content;
     background: #090711;
+    padding-bottom: 150px;
     
 
 }
@@ -239,14 +240,91 @@ a#cv:hover {
 
 
 
+section#projects {
+    background-color: rgb(16, 14, 26);
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+    height: f;
+
+}
+
+.projects-div {
+    padding: 100px 20px;
+    display: flex;
+    justify-content:space-evenly;
+    
+    
+}
+
+
+.card {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 0.2s;
+    border-radius: 3%;
+    width: 450px;
+    height: 270px;
+    border: 1px solid black;
+
+}
+
+.card#card1 {
+    background-image: url(../assets/focustimer.png);
+}
+
+.card#card2 {
+    background-image: url(../assets/githubfav.png);
+}
+
+.card#card3 {
+    background-image: url(../assets/imc.png);
+}
 
 
 
+.card:hover {
+    transform:scale(1.1);
+    transition: 0.2s;
+}
+
+section#contact {
+    background-color: aliceblue;
+}
+
+.button {
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+  }
+
+section#contact {
+    background: #090711;
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+}
+
+  .contact-div {
+    background: #090711;
+    padding-top: 40px;
+    padding-bottom: 150px;
+  }
+
+  section#contact h2 {
+    padding-bottom: 40px;
+  }
 
 
 @media(max-width: 1500px){
     .about-div {
-        display: block;
+        flex-direction: column;
     }
 
     .about-div h2:nth-child(1){
@@ -257,7 +335,15 @@ a#cv:hover {
     .about-div h2:nth-child(2){
         padding: 0px 20px 20px;
     }
+
+    .projects-div {
+        flex-direction: column;
+        align-items: center;
+        gap: 100px;
 }
+
+}
+
 
 
 
@@ -275,14 +361,12 @@ a#cv:hover {
     }
 
     .about-div h2 {
-        display: block;
+        flex-direction: column;
         padding-left: 0;
     }
 
 
 }
-
-
 
 @media (max-width: 1080px){
 
@@ -327,14 +411,15 @@ a#cv:hover {
         gap: 350px;
     }
     .home-div {
-        display: block;
+        flex-direction: column;
         padding: 0;
     }
 }
 
 @media (max-width: 820px) {
     section .home-div {
-        display: block;
+        flex-direction: column;
+        padding-left: 40px;
     }
 
     .logo{
@@ -360,4 +445,11 @@ a#cv:hover {
     
         
     }
+}
+
+@media (max-width: 530px) {
+    .card {
+        max-height: 150px;
+        max-width: 320px;
+}
 }
