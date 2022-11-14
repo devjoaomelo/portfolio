@@ -19,6 +19,11 @@ body {
     overflow-x: hidden;
 }
 
+.header {
+    width: 100%;
+    z-index: 2;
+}
+
 nav {
     display: flex;
     justify-content: space-around;
@@ -257,7 +262,6 @@ a#cv:hover {
 }
 
 section:nth-child(3) h2 {
-    font-size: ;
     padding-bottom: 100px;
 }
 
@@ -377,7 +381,7 @@ section#contact {
         overflow-x: hidden;
     }
     .nav-list {
-        position: absolute;
+        position: fixed; z-index: 2;
         top: 8vh;
         right: 0;
         width: 250px;
