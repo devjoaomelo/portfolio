@@ -28,7 +28,8 @@
        </nav>
     </header>
     <main>
-        <section id="home">
+        <section>
+            <div class="container">
             <div class="home-div">
                 <h2>Olá, Eu sou o <br><span id="name">João Melo</span><br>
                     <span id="curso">Estudante de Análise e<br>Desenvolvimento de Sistemas</span>
@@ -38,18 +39,22 @@
 
                 <img src="./assets/Sem título.png" alt="foto de perfil">
             </div>
+        </div>
             
         </section>
-        <section id="about">
-            <div class="about-div">
+        <section>
+            <div class="container">
+            <div class="about-div reveal">
                 <h2>HE<span id="logo">{_{_</span>O <br>WORL<span id="logo">{)</span></h2>
                 <h2><span class="title">Sobre</span><br>
                 25 anos, morador de Campinas/SP, com muita vontade de aprender e amante de tecnologia.<br>Atualmente estou cursando <strong>Análise e Desenvolvimento de Sistemas</strong> na <strong>UNINTER</strong>, pretendo assim que terminar dar inicio em engenharia de software<br>Mergulhando de cabeça nesse vasto mundo de cursos, buscando me preparar para oportunidades que aparecem e absorver todo o conhecimento que puder</h2>
             </div>
+        </div>
         </section>
         <section id="projects">
-            <h2>Projetos</h2>
-            <div class="projects-div">
+            <div class="container reveal">
+                <h2>Projetos</h2>
+            <div class="projects-div ">
                 <div class="card" id="card1">
                 </div>
                 <div class="card" id="card2">
@@ -58,17 +63,40 @@
                     
                 </div>
             </div>
+            </div>
         </section>
         <section id="contact">
+            <div class="container reveal">
             <h2>Contato</h2>
-            <div class="contact-div">
+            <div class="contact-div ">
                 <h2>Email: joaomelo.goncalves@gmail.com</h2>
                 <a href="https://www.linkedin.com/in/joaogmelo/" class="button" target="_blank">Linkedin</a>
                 <a href="https://github.com/devjoaomelo" class="button" target="_blank">Github</a>
+            </div>
                 
             </div>
         </section>
     </main>
-    <script src="./scripts/mobile-navbar.js"></script>    
+    <script src="./scripts/mobile-navbar.js"></script>
+    <script type="text/javascript">
+    window.addEventListener('scroll', reveal);
+    function reveal(){
+    var reveals = document.querySelectorAll('.reveal');
+    for(var i = 0; i < reveals.length; i++){
+        var windowheight = window.innerHeight;
+        var revealtop = reveals[i].getBoundingClientRect().top;
+        var revealpoint = 150;
+
+        if(revealtop < windowheight - revealpoint){
+            reveals[i].classList.add('active')
+        }
+        else {
+            reveals[i].classList.remove('active');
+
+        }
+
+    }
+};
+    </script>
 </body>
 </html>
